@@ -37,7 +37,32 @@ h3 {
 
 }
 
-.navbar {
+.topnav {
+
+
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #1BE;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #1BE8;
+  color: #1BE;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
   color: #1BE;
 }
 
