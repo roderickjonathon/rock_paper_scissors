@@ -2,26 +2,38 @@ class RockPaperScissors
 
   def initialize(player1, player2)
     @player1 = player1
-    @player2 = player2
+    @player2 = rand(1..3)
   end
 
+
   def playgame
-  if @player1 == @player2
+
+    case @player2
+    when 1
+      @player2 = "rock"
+    when 2
+      @player2 = "paper"
+    when 3
+      @player2 = "scissors"
+    end
+
+
+    if @player1 == @player2
       return "It's a tie! Try again..."
     elsif @player1 == "rock" && @player2 == "scissors"
-      return "Rock wins!"
+      return "Aye! You win by beating scissors with rock!"
     elsif @player1 == "scissors" && @player2 == "paper"
-      return "Scissors wins!"
+      return "Aye! You win by beating paper with scissors!"
     elsif @player1 == "paper" && @player2 == "rock"
-      return "Paper wins!"
+      return "Aye! You win by beating rock with paper!"
 
 
     elsif @player1 == "rock" && @player2 == "paper"
-      return "Paper wins!"
+      return "Naw! Your rock got beaten by paper!"
     elsif @player1 == "paper" && @player2 == "scissors"
-      return "Scissors wins!"
+      return "Naw! Your paper got beaten by scissors!"
     elsif @player1 == "scissors" && @player2 == "rock"
-      return "Rock wins!"
+      return "Naw! Your scissors got beaten by rock!"
 
     end
 
